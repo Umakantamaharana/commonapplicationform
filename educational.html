@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        body{
+            padding: 10px;
+            background: url(https://lorelleteaches.files.wordpress.com/2012/08/seamless-background-image-tile.jpg?w=584);
+        }
+        form{
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 10px rgba(0, 0, 0, 0.5)
+        }
+        .heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        footer{
+            text-align: center;
+        }
+        .fp{
+            font-size:25px; 
+            text-decoration:none;
+        }
+        .fa{
+            font-size:25px;
+        }
+    </style>
+    <title>Student Login</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Educational Details</h1>
+    </div>
+        <div class="form-group row">
+            <label for="10th" class="col-sm-2 col-form-label">10th mark</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="1" id="1" placeholder="marks in total" required><br>
+                <input type="text" class="form-control" name="2" id="2" placeholder="Name of School" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="12th" class="col-sm-2 col-form-label">12th mark</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="3" id="3" placeholder="marks in total" required><br>
+                <input type="text" class="form-control" name="4" id="4" placeholder="Name of College" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="graduation" class="col-sm-2 col-form-label">Graduation mark</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="5" id="5" placeholder="marks in total" required><br>
+                <input type="text" class="form-control" name="6" id="6" placeholder="Name of University" required>
+            </div>
+        </div>
+        <div class="form-group row" style="display:flex; justify-content:center;">
+            <div class="col-sm-10">
+                <button type="submit" onclick="savevalues()" class="btn btn-primary">show details</button>
+            </div>
+        </div>
+    <footer>
+        <nav>
+            <p class="fp">
+                <a class="fa" href="#">About Us</a>|
+                <a class="fa" href="#">Privacy Policy</a>
+            </p>
+        </nav>
+        <p>@pythonwithsuraj, Some rights reserved</p>
+    </footer>
+
+    <script>
+        function savevalues(){
+            i = document.getElementById('1').value;
+            j = document.getElementById('2').value;
+            k = document.getElementById('3').value;
+            l = document.getElementById('4').value;
+            m = document.getElementById('5').value;
+            n = document.getElementById('6').value;
+
+            console.log(i,j,k,l,m,n)
+
+            localStorage.setItem("i",i);
+            localStorage.setItem("j",j);
+            localStorage.setItem("k",k);
+            localStorage.setItem("l",l);
+            localStorage.setItem("m",m);
+            localStorage.setItem("n",n);
+
+            window.location.href = "index.html";
+        }
+
+    </script>
+</body>
+</html>

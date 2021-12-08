@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Student Login</title>
+    <style>
+        .profilepic{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .profilepic #box{
+            width: 100px;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            box-shadow: 0px 0px 10px black;
+        }
+        footer{
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .fp{
+            font-size:25px; 
+            text-decoration:none;
+        }
+        .fa{
+            font-size:25px;
+        }
+    </style>
+</head>
+<!-- <body>
+    <div class="profilepic">
+        <div id="box">hello</div>
+    </div>
+    <hr> -->
+    <h1 style="text-align: center;">Common Application Form</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Name : </td>
+                  <td id="a"></td>
+                  <td id="b"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>E-mail : </td>
+                  <td id="c"></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Phone : </td>
+                  <td id="d"></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Address : </td>
+                  <td id="ef"></td>
+                  <td>Pincode : </td>
+                  <td id="g"></td>
+                </tr>
+                <hr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Course interested : </td>
+                  <td id="h"></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>10th marks : </td>
+                  <td id="i"></td>
+                  <td>from</td>
+                  <td id="j"></td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>12th marks : </td>
+                  <td id="k"></td>
+                  <td>from</td>
+                  <td id="l"></td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>Graduation marks : </td>
+                  <td id="m"></td>
+                  <td>from</td>
+                  <td id="n"></td>
+                </tr>
+              </tbody>
+        </table>
+      </div>
+      <a target="_blank" href="personal.html"><button type="button" class="btn btn-primary">Home</button></a>
+    <footer>
+            <nav>
+                <p class="fp">
+                    <a class="fa" href="#">About Us</a>|
+                    <a class="fa" href="#">Privacy Policy</a>
+                </p>
+            </nav>
+            <p>@pythonwithsuraj, Some rights reserved</p>
+        </footer>
+        <script>
+            window.onload = function load_data(){
+                var fname = localStorage.getItem("a");
+                var lname = localStorage.getItem("b");
+                var email = localStorage.getItem("c");
+                var phone = localStorage.getItem("d");
+                var addr1 = localStorage.getItem("e");
+                var addr2 = localStorage.getItem("f");
+                var pin = localStorage.getItem("g");
+                var course = localStorage.getItem("h");
+                var m1 = localStorage.getItem("i");
+                var s1 = localStorage.getItem("j");
+                var m2 = localStorage.getItem("k");
+                var s2 = localStorage.getItem("l");
+                var m3 = localStorage.getItem("m");
+                var s3 = localStorage.getItem("n");
+
+                document.getElementById("a").innerText = fname;
+                document.getElementById("b").innerText = lname;
+                document.getElementById("c").innerText = email;
+                document.getElementById("d").innerText = phone;
+                document.getElementById("ef").innerText = addr1 + "," + addr2;
+                document.getElementById("g").innerText = pin;
+
+                document.getElementById("h").innerText = course;
+                document.getElementById("i").innerText = m1;
+                document.getElementById("j").innerText = s1;
+                document.getElementById("k").innerText = m2;
+                document.getElementById("l").innerText = s2;
+                document.getElementById("m").innerText = m3;
+                document.getElementById("n").innerText = s3;
+            }
+        </script>
+</body>
+</html>
